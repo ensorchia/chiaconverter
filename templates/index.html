@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chiatr | Ücretsiz Converter Projesi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #34495e;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"], input[type="file"], select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 1rem;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #ffd700;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f39c12;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>chiatr | Ücretsiz Converter Projesi</h1>
+
+        <h2>YouTube Videosu İndir</h2>
+        <form action="/convert-youtube" method="POST">
+            <input type="text" name="yt_link" placeholder="YouTube Linki" required>
+            <select name="format">
+                <option value="mp3">MP3</option>
+                <option value="mp4">MP4</option>
+            </select>
+            <button type="submit">Dönüştür</button>
+        </form>
+
+        <h2>Resim Formatı Dönüştür</h2>
+        <form action="/convert-image" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image_file" required>
+            <select name="target_format">
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WEBP</option>
+            </select>
+            <button type="submit">Dönüştür</button>
+        </form>
+
+        <footer>
+            <p>Bu proje herkese açık ücretsiz bir öğretici projedir. Herkes dilediği gibi kullanabilir ve katkıda bulunabilir.</p>
+            <p>Made with ❤️ by <a href="https://github.com/Ensorchia" target="_blank">Ensorchia</a></p>
+            
+        </footer>
+    </div>
+</body>
+</html>
