@@ -1,0 +1,4 @@
+flask
+pytube
+yt-dlp
+pillow
